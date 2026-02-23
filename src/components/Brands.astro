@@ -1,0 +1,21 @@
+---
+const brands = [
+  { name: "Marca 1", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" }, // Exemplos genéricos
+  { name: "Marca 2", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+  { name: "Marca 3", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+  { name: "Marca 4", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" }
+];
+---
+<section class="py-12 border-t border-b border-slate-100 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Trabalhamos com as melhores marcas do mercado</p>
+    
+    <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+      {brands.map(brand => (
+        <div class="w-24 md:w-32 flex items-center justify-center">
+          <img src={brand.logo} alt={brand.name} class="max-w-full h-auto object-contain filter hover:brightness-110 transition" loading="lazy"/>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

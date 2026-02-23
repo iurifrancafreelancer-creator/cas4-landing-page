@@ -1,0 +1,36 @@
+---
+// Substitua por caminhos das imagens reais dos prints de WhatsApp cortados bonitinhos na pasta public
+const prints = [
+  "/print1.jpg", // Ex: Crie uma imagem public/print1.jpg com um print real
+  "/print2.jpg",
+  "/print3.jpg",
+  "/print4.jpg",
+  "/print5.jpg"
+];
+---
+<section class="py-20 bg-[#0A2F5C] overflow-hidden" id="depoimentos">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">O que dizem sobre nossa entrega</h2>
+      <p class="text-slate-300">Não acredite apenas em nós. Veja o que quem já vivenciou a experiência Cas4 tem a dizer.</p>
+    </div>
+
+    <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar" style="scrollbar-width: none;">
+      {prints.map((img, i) => (
+        <div class="snap-center shrink-0 w-[280px] md:w-[320px] bg-white rounded-2xl p-2 shadow-xl transform transition hover:-translate-y-2">
+          <div class="w-full h-[400px] bg-slate-100 rounded-xl flex items-center justify-center overflow-hidden relative">
+             <img src={img} alt={`Depoimento ${i + 1} WhatsApp`} class="w-full h-full object-cover" onerror="this.style.display='none'" />
+             <div class="absolute text-slate-400 text-sm text-center px-4 -z-10">Coloque seu print do WhatsApp em<br/><b>public{img}</b></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Oculta a barra de rolagem feia, mantendo o scroll funcionando */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+</style>

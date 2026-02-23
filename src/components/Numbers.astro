@@ -1,0 +1,38 @@
+---
+const stats = [
+  { value: "+800", label: "Clientes Atendidos" },
+  { value: "+1.500", label: "Pedidos Entregues" },
+  { value: "+30.000m²", label: "De Pisos" },
+  { value: "4 Anos", label: "De Mercado" },
+];
+---
+
+<section class="numbers">
+  <div class="container stats-grid">
+    {stats.map(stat => (
+      <div class="stat-item">
+        <h2>{stat.value}</h2>
+        <p>{stat.label}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .numbers {
+    background-color: #0A2F5C; /* Azul escuro */
+    color: white;
+    padding: 3rem 1rem;
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+  h2 {
+    color: #B28D42; /* Dourado */
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

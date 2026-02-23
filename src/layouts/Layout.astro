@@ -1,0 +1,25 @@
+---
+import '../global.css';
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+const wppLink = "https://wa.me/55SEUNUMERO?text=Olá,%20gostaria%20de%20agendar%20um%20diagnóstico%20gratuito!";
+---
+
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Cas4 Pisos & Ambientes | Especialistas em pisos vinílicos, laminados e persianas." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body class="font-['Montserrat'] bg-slate-50 text-slate-800 antialiased selection:bg-[#B28D42] selection:text-white pt-20">
+		<slot />
+	</body>
+</html>
