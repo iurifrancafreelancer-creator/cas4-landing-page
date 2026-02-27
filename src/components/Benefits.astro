@@ -1,0 +1,67 @@
+---
+const benefits = [
+  { title: "Conforto Acústico", desc: "Sem som de 'toc-toc no vinílico'", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"></path>` },
+  { title: "Conforto Térmico", desc: "Agradável o ano todo", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>` },
+  { title: "Instalação Rápida", desc: "Sem sujeira e entulho", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>` },
+  { title: "Ideal para Pets", desc: "Seguro para seu animal", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0zm6 3a3 3 0 11-6 0 3 3 0 016 0zM9 16a3 3 0 11-6 0 3 3 0 016 0zm3-11a3 3 0 11-6 0 3 3 0 016 0z"></path>` },
+  { title: "Fácil de Limpar", desc: "Praticidade no dia a dia", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>` },
+  { title: "Imune a Cupins", desc: "Zero dor de cabeça", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>` },
+  { title: "Hipoalérgicos", desc: "Resistente a água e mofo", icon: `<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>`}
+];
+---
+<section class="py-16 md:py-24 bg-white overflow-hidden" id="tecnologia">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-10 md:mb-14 px-4 sm:px-0">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-[#0A2F5C] mb-4 leading-tight">
+        Entenda a Tecnologia dos Materiais
+      </h2>
+      <p class="text-base md:text-lg text-slate-600">
+        Beleza é fundamental, mas o que garante a durabilidade é a engenharia por trás do piso que você escolhe.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8 mb-12 md:mb-16">
+      
+      <div class="bg-slate-50 rounded-3xl p-6 md:p-10 border border-slate-100 hover:border-[#B28D42]/30 transition-colors text-left relative overflow-hidden group">
+        <div class="absolute -right-10 -top-10 w-32 h-32 bg-[#B28D42]/10 rounded-full blur-2xl group-hover:bg-[#B28D42]/20 transition-all"></div>
+        <h3 class="text-2xl font-bold text-[#0A2F5C] mb-4">Piso Vinílico (PVC)</h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+          É um material composto por PVC e minerais, flexível, resistente à água e é colado diretamente no contrapiso ou piso cerâmico existente no local.
+        </p>
+        <div class="bg-white p-4 rounded-xl border-l-4 border-[#B28D42] text-sm text-slate-700 shadow-sm mt-auto">
+          <strong>Atenção técnica:</strong> A base necessita de uma preparação rigorosa antes da instalação, pois o vinílico precisa de uma superfície perfeitamente lisa para ser assentado.
+        </div>
+      </div>
+
+      <div class="bg-slate-50 rounded-3xl p-6 md:p-10 border border-slate-100 hover:border-[#B28D42]/30 transition-colors text-left relative overflow-hidden group">
+        <div class="absolute -right-10 -top-10 w-32 h-32 bg-[#0A2F5C]/5 rounded-full blur-2xl group-hover:bg-[#0A2F5C]/10 transition-all"></div>
+        <h3 class="text-2xl font-bold text-[#0A2F5C] mb-4">Piso Laminado</h3>
+        <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4">
+          Composto por lâminas de madeira de alta densidade, é instalado por encaixe (click). Fica "flutuante" no ambiente e é arrematado com rodapés e perfis nas áreas de transição (portas).
+        </p>
+        <div class="bg-white p-4 rounded-xl border-l-4 border-[#0A2F5C] text-sm text-slate-700 shadow-sm mt-auto">
+          <strong>Resistência:</strong> Laminados tradicionais não podem com água, mas oferecemos também linhas de laminados com tecnologia resistente à água, em diferentes níveis de intensidade.
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="text-xl font-bold text-center text-[#0A2F5C] mb-8">Vantagens que transformam o seu dia a dia</h3>
+    
+    <div class="flex md:grid md:grid-cols-3 lg:grid-cols-6 overflow-x-auto snap-x snap-mandatory gap-4 pb-6 hide-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
+      
+      {benefits.map(benefit => (
+        <div class="snap-center shrink-0 w-[45%] md:w-auto flex flex-col items-center justify-center bg-white border border-slate-100 rounded-2xl p-5 text-center shadow-sm hover:shadow-md hover:border-[#B28D42]/40 transition-all">
+          <div class="w-12 h-12 rounded-full bg-[#0A2F5C]/5 text-[#B28D42] flex items-center justify-center mb-3">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" set:html={benefit.icon} />
+          </div>
+          <h4 class="font-bold text-slate-800 text-sm mb-1">{benefit.title}</h4>
+          <p class="text-[10px] md:text-xs text-slate-500">{benefit.desc}</p>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
