@@ -15,7 +15,7 @@ export default function Navbar() {
               <img 
                 src="/logo-cas4.webp" 
                 alt="Logo Cas4 Pisos & Ambientes" 
-                className="h-16 w-auto object-contain" 
+                className="h-24 w-auto object-contain" 
               />
             </a>
           </div>

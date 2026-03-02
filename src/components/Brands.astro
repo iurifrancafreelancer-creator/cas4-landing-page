@@ -1,21 +1,81 @@
 ---
+// Salve as logos na sua pasta 'public/logos/' com os nomes exatos configurados abaixo.
 const brands = [
-  { name: "Marca 1", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" }, // Exemplos genéricos
-  { name: "Marca 2", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-  { name: "Marca 3", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
-  { name: "Marca 4", logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" }
+  { name: "Tarkett", logo: "/logos/tarkett.webp" },
+  { name: "Quick-Step", logo: "/logos/quick-step.svg" },
+  { name: "Durafloor", logo: "/logos/durafloor.webp" },
+  { name: "Eucafloor", logo: "/logos/eucafloor.webp" },
+  { name: "Santa Luzia", logo: "/logos/santa-luzia.webp" },
+  { name: "Arquitech", logo: "/logos/arquitech.webp" },
+  { name: "Biancogres", logo: "/logos/biancogres.webp" },
+  { name: "Ecomex", logo: "/logos/ecomex.webp" },
 ];
 ---
-<section class="py-12 border-t border-b border-slate-100 bg-white">
+<section class="py-10 border-t border-b border-slate-100 bg-white overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <p class="text-center text-sm font-bold text-slate-400 uppercase tracking-widest mb-8">Trabalhamos com as melhores marcas do mercado</p>
+    <p class="text-center text-xs md:text-sm font-bold text-slate-400 uppercase tracking-widest mb-8 md:mb-10">
+      Homologados pelas maiores indústrias do mercado
+    </p>
     
-    <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-      {brands.map(brand => (
-        <div class="w-24 md:w-32 flex items-center justify-center">
-          <img src={brand.logo} alt={brand.name} class="max-w-full h-auto object-contain filter hover:brightness-110 transition" loading="lazy"/>
-        </div>
-      ))}
+    <div class="relative flex overflow-hidden mask-esteira md:mask-none md:overflow-visible">
+      
+      <div class="flex items-center gap-8 md:gap-16 pr-8 md:pr-0 w-max md:w-full animate-esteira md:animate-none opacity-50 grayscale hover:grayscale-0 transition-all duration-500 md:flex-wrap md:justify-center">
+        
+        {brands.map(brand => (
+          <div class="w-32 md:w-28 flex-shrink-0 flex items-center justify-center">
+            <img 
+              src={brand.logo} 
+              alt={`Logo ${brand.name}`} 
+              title={brand.name}
+              class="max-w-full h-auto object-contain filter hover:brightness-110 transition" 
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+        ))}
+
+        {brands.map(brand => (
+          <div class="w-20 md:w-28 flex-shrink-0 flex items-center justify-center md:hidden">
+            <img 
+              src={brand.logo} 
+              alt={`Logo ${brand.name}`} 
+              title={brand.name}
+              class="max-w-full h-auto object-contain filter hover:brightness-110 transition" 
+              loading="lazy"
+              onerror="this.style.display='none'"
+            />
+          </div>
+        ))}
+
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  /* Efeito exclusivo para o celular */
+  @media (max-width: 767px) {
+    /* Cria o desbotamento suave (fade) nas laterais esquerda e direita */
+    .mask-esteira {
+      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    
+    /* Velocidade da esteira: 15s para dar uma volta completa (ajuste se quiser mais rápido/devagar) */
+    .animate-esteira {
+      animation: esteira 15s linear infinite;
+    }
+    
+    /* (Opcional) Pausa a esteira se o usuário segurar o dedo em cima */
+    .animate-esteira:active {
+      animation-play-state: paused;
+    }
+  }
+
+  /* A engrenagem da esteira: Move a pista 50% para a esquerda, 
+     quando termina, ela volta ao zero instantaneamente de forma invisível */
+  @keyframes esteira {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>

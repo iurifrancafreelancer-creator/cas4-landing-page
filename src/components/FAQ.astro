@@ -1,49 +1,69 @@
 ---
+const faqs = [
+  {
+    q: "Qual a diferença entre os pisos vinílicos e laminados?",
+    a: "As diferenças principais estão na composição e na resistência à água. Enquanto o vinílico abafa melhor o som e é mais resistente à umidade, o laminado oferece excelente custo-benefício e resistência a riscos. Nossa equipe faz uma avaliação consultiva para indicar a melhor opção para o seu ambiente."
+  },
+  {
+    q: "Vocês trabalham com piso laminado colocado?",
+    a: "Sim, nós fornecemos todos os insumos para instalação do piso laminado ou vinílico e mão de obra especializada."
+  },
+  {
+    q: "Como funcionam os prazos de entrega e instalação?",
+    a: "Trabalhamos com cronogramas rigorosos para não atrasar a sua mudança. A instalação de pisos secos é extremamente rápida (muitas vezes feita em um único dia) e deve ser programada para o final da obra, antes da última demão de pintura."
+  },
+  {
+    q: "O que é piso vinílico autocolante?",
+    a: "O piso vinílico autocolante é um revestimento de PVC em réguas ou placas que já possui adesivo no verso, dispensando o uso de cola separada."
+  },
+  {
+    q: "O que é piso vinílico click?",
+    a: "O piso vinílico clicado é um revestimento de PVC rígido instalado sem cola, utilizando um sistema de encaixe macho-macho (click) entre as réguas, geralmente sobre uma manta, o que permite uma instalação rápida, limpa e flutuante."
+  },
+  {
+    q: "O serviço tem um preço competitivo?",
+    a: "Sim! A Cas4 entrega alto padrão de acabamento com orçamentos justos e condições de pagamento que se adaptam à sua realidade. Lembre-se: qualidade e instalação impecável evitam custos e dores de cabeça no futuro."
+  }
+];
+
+// Gerador Automático de Schema FAQPage para o Google
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+});
 ---
-<section class="py-24 bg-white" id="faq">
+<section class="py-16 md:py-24 bg-white" id="faq">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-2xl md:text-4xl font-bold text-[#0A2F5C] mb-4 md:mb-6 leading-tight">
-          Dúvidas frequentes
-        </h2>
+    <div class="text-center mb-10 md:mb-16">
+      <h2 class="text-[20px] md:text-4xl font-extrabold text-[#0A2F5C] mb-4 md:mb-6 leading-tight">
+        Dúvidas frequentes
+      </h2>
     </div>
 
     <div class="space-y-4">
-      <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer border border-slate-100 hover:border-[#B28D42]/50">
-        <summary class="flex justify-between items-center font-bold text-[#0A2F5C] list-none text-lg">
-          Qual a diferença entre os pisos vinílicos e laminados?
-          <span class="transition group-open:rotate-180">
-            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-          </span>
-        </summary>
-        <p class="text-slate-600 mt-4 leading-relaxed">
-          As diferenças principais estão na composição e na resistência à água. Enquanto o vinílico abafa melhor o som e é mais resistente à umidade, o laminado oferece excelente custo-benefício e resistência a riscos. Nossa equipe faz uma avaliação consultiva para indicar a melhor opção para o seu ambiente.
-        </p>
-      </details>
-
-      <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer border border-slate-100 hover:border-[#B28D42]/50">
-        <summary class="flex justify-between items-center font-bold text-[#0A2F5C] list-none text-lg">
-          Como funcionam os prazos de entrega e instalação?
-          <span class="transition group-open:rotate-180">
-            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-          </span>
-        </summary>
-        <p class="text-slate-600 mt-4 leading-relaxed">
-          Trabalhamos com cronogramas rigorosos para não atrasar a sua mudança. A instalação de pisos secos é extremamente rápida (muitas vezes feita em um único dia) e deve ser programada para o final da obra, antes da última demão de pintura.
-        </p>
-      </details>
-
-      <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer border border-slate-100 hover:border-[#B28D42]/50">
-        <summary class="flex justify-between items-center font-bold text-[#0A2F5C] list-none text-lg">
-          O serviço tem um preço competitivo?
-          <span class="transition group-open:rotate-180">
-            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-          </span>
-        </summary>
-        <p class="text-slate-600 mt-4 leading-relaxed">
-          Sim! A Cas4 entrega alto padrão de acabamento com orçamentos justos e condições de pagamento que se adaptam à sua realidade. Lembre-se: qualidade e instalação impecável evitam custos e dores de cabeça no futuro.
-        </p>
-      </details>
+      {faqs.map((faq) => (
+        <details class="group bg-slate-50 p-5 md:p-6 rounded-xl cursor-pointer border border-slate-100 hover:border-[#B28D42]/50 [&::-webkit-details-marker]:hidden">
+          <summary class="flex justify-between items-center font-bold text-[#0A2F5C] list-none text-base md:text-lg outline-none">
+            <span class="pr-6">{faq.q}</span>
+            <span class="transition-transform duration-300 group-open:rotate-180 flex-shrink-0 text-[#B28D42]">
+              <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+            </span>
+          </summary>
+          <p class="text-slate-600 mt-4 leading-relaxed text-[14px] md:text-base border-t border-slate-200 pt-4">
+            {faq.a}
+          </p>
+        </details>
+      ))}
     </div>
   </div>
+
+  <script type="application/ld+json" set:html={faqSchema} />
 </section>
