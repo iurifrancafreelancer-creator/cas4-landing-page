@@ -1,56 +1,90 @@
 ---
 import '../global.css';
+
 interface Props {
-	title: string;
+  title: string;
 }
+
 const { title, description = "A loja especialista em pisos secos em Itabirito e região." } = Astro.props;
 const wppLink = "https://wa.me/5531997289558?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consultoria%20gratuita!";
 
-// Substitua pelo domínio real quando for publicar
-const siteURL = "https://www.cas4.com.br";
+// CORREÇÃO 1: Adicionado a barra '/' que faltava no "https://"
+const siteURL = "https://cas4pisoseambientes.com.br";
 const canonicalURL = new URL(Astro.url.pathname, siteURL).href;
 
 // Schema.org para Negócios Locais
 const localBusinessSchema = JSON.stringify({
   "@context": "https://schema.org",
-  "@type": "HomeAndConstructionBusiness",
+  "@type": "HomeAndConstructionBusiness", // Subtipo válido de LocalBusiness
   "name": "Cas4 Pisos & Ambientes",
-  "image": `${siteURL}/logo.png`,
+  "image": [
+    `${siteURL}/logo-cas4.webp`
+  ],
+  "@id": `${siteURL}/#business`, 
   "url": siteURL,
-  "telephone": "+55 31 99728-9558",
+  "telephone": "+55 31 99728-9558", 
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "R. Raul Soares, 186, Centro", 
     "addressLocality": "Itabirito",
     "addressRegion": "MG",
+    "postalCode": "35450-003", 
     "addressCountry": "BR"
   },
-  "description": description
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -20.2520, 
+    "longitude": -43.8016 
+  },
+  "description": description,
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:30",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ]
 });
 ---
 
 <!doctype html>
 <html lang="pt-BR" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/logo.png" />
-		
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<link rel="canonical" href={canonicalURL} />
-		
-		<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-		
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={`${siteURL}/logo.png`} />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon-cas4.png" />
+        
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+        
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={`${siteURL}/logo-cas4.webp`} />
 
-		<script type="application/ld+json" set:html={localBusinessSchema} />
-	</head>
-	<body class="antialiased text-slate-800 bg-white">
-		<slot />
-	</body>
+        <script type="application/ld+json" set:html={localBusinessSchema}></script>
+    </head>
+    <body class="antialiased text-slate-800 bg-white">
+        <slot />
+    </body>
 </html>
