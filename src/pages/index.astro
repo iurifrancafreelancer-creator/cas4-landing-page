@@ -16,21 +16,24 @@ import WhoIsItFor from '../components/WhoIsItFor.astro';
 import Products from '../components/Products.astro';
 import Benefits from '../components/Benefits.astro';
 import Brands from '../components/Brands.astro';
+import Comparison from '../components/Comparison.astro';
+import PaymentShowroom from '../components/PaymentShowroom.astro';
 ---
 
 <Layout 
-	title="Piso Vinílico e Piso Laminado Colocado a Partir de R$100m²"
+	title="Piso Vinílico e Piso Laminado a Partir de R$65,90"
 	description="Veja as melhores opções de piso vinílico e piso laminado em Itabirito e região. Piso vinílico autocolante, piso vinílico click e piso laminado colocado.">
 	<Navbar client:load /> 
 	<main>
 		<Hero />
 		<Authority />
-		<Portfolio />
 		<Products />
+		<Comparison />
+		<Portfolio />
 		<Brands />
-		<Benefits />
 		<WhoIsItFor />
 		<Testimonials />
+		<PaymentShowroom />
 		<FAQ />
 		<CTA />
 	</main>

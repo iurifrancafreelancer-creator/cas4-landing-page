@@ -9,6 +9,7 @@ const brands = [
   { name: "Arquitech", logo: "/logos/arquitech.webp" },
   { name: "Biancogres", logo: "/logos/biancogres.webp" },
   { name: "Ecomex", logo: "/logos/ecomex.webp" },
+  { name: "Gart", logo: "/logos/logo_gart.webp" },
 ];
 ---
 <section class="py-10 border-t border-b border-slate-100 bg-white overflow-hidden">
@@ -17,17 +18,17 @@ const brands = [
       Homologados pelas maiores indústrias do mercado
     </p>
     
-    <div class="relative flex overflow-hidden mask-esteira md:mask-none md:overflow-visible">
+    <div class="relative flex overflow-hidden mask-esteira cursor-default">
       
-      <div class="flex items-center gap-8 md:gap-16 pr-8 md:pr-0 w-max md:w-full animate-esteira md:animate-none opacity-50 grayscale hover:grayscale-0 transition-all duration-500 md:flex-wrap md:justify-center">
+      <div class="flex items-center gap-8 md:gap-16 pr-8 md:pr-16 w-max animate-esteira hover:[animation-play-state:paused] transition-all duration-500">
         
         {brands.map(brand => (
-          <div class="w-32 md:w-28 flex-shrink-0 flex items-center justify-center">
+          <div class="w-24 md:w-32 flex-shrink-0 flex items-center justify-center group opacity-70 hover:opacity-100 transition-opacity duration-300">
             <img 
               src={brand.logo} 
               alt={`Logo ${brand.name}`} 
               title={brand.name}
-              class="max-w-full h-auto object-contain filter hover:brightness-110 transition" 
+              class="max-w-full h-auto object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300" 
               loading="lazy"
               onerror="this.style.display='none'"
             />
@@ -35,12 +36,12 @@ const brands = [
         ))}
 
         {brands.map(brand => (
-          <div class="w-20 md:w-28 flex-shrink-0 flex items-center justify-center md:hidden">
+          <div class="w-24 md:w-32 flex-shrink-0 flex items-center justify-center group opacity-70 hover:opacity-100 transition-opacity duration-300">
             <img 
               src={brand.logo} 
               alt={`Logo ${brand.name}`} 
               title={brand.name}
-              class="max-w-full h-auto object-contain filter hover:brightness-110 transition" 
+              class="max-w-full h-auto object-contain filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300" 
               loading="lazy"
               onerror="this.style.display='none'"
             />
@@ -53,25 +54,19 @@ const brands = [
 </section>
 
 <style>
-  /* Efeito exclusivo para o celular */
-  @media (max-width: 767px) {
-    /* Cria o desbotamento suave (fade) nas laterais esquerda e direita */
-    .mask-esteira {
-      mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-      -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    }
-    
-    /* Velocidade da esteira: 15s para dar uma volta completa (ajuste se quiser mais rápido/devagar) */
-    .animate-esteira {
-      animation: esteira 15s linear infinite;
-    }
-    
-    /* (Opcional) Pausa a esteira se o usuário segurar o dedo em cima */
-    .animate-esteira:active {
-      animation-play-state: paused;
-    }
+  /* A máscara e animação agora valem para TODAS as telas (removido o @media) */
+  
+  /* Cria o desbotamento suave (fade) nas laterais esquerda e direita */
+  .mask-esteira {
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   }
-
+  
+  /* Velocidade da esteira: Aumentei para 25s para ficar elegante e legível no desktop */
+  .animate-esteira {
+    animation: esteira 25s linear infinite;
+  }
+  
   /* A engrenagem da esteira: Move a pista 50% para a esquerda, 
      quando termina, ela volta ao zero instantaneamente de forma invisível */
   @keyframes esteira {

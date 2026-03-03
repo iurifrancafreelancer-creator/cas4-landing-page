@@ -24,6 +24,8 @@ export default function Navbar() {
           <nav className="hidden md:flex space-x-8 items-center">
             <a href="#solucoes" className="text-sm font-semibold text-slate-700 hover:text-[#B28D42] transition-colors">Soluções</a>
             <a href="#diferenciais" className="text-sm font-semibold text-slate-700 hover:text-[#B28D42] transition-colors">Diferenciais</a>
+            <a href="#portfolio" className="text-sm font-semibold text-slate-700 hover:text-[#B28D42] transition-colors">Portfólio</a>
+            <a href="#condicoes" className="text-sm font-semibold text-slate-700 hover:text-[#B28D42] transition-colors">Pagamento</a>
             <a href="#faq" className="text-sm font-semibold text-slate-700 hover:text-[#B28D42] transition-colors">Dúvidas</a>
             <a href={wppLink} target="_blank" rel="noreferrer" className="px-6 py-2 border-2 border-[#0A2F5C] text-[#0A2F5C] font-bold rounded-lg hover:bg-[#0A2F5C] hover:text-white transition-all">
               Fale Conosco
@@ -51,8 +53,11 @@ export default function Navbar() {
           <div className="px-4 pt-2 pb-6 space-y-2 flex flex-col">
             <a href="#solucoes" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Soluções</a>
             <a href="#diferenciais" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Diferenciais</a>
+             <a href="#portfolio" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Portfólio</a>
+            <a href="#condicoes" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Pagamento</a>
+            <a href="#faq" onClick={() => setIsOpen(false)} className="block px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-50">Dúvidas</a>
             <a href={wppLink} target="_blank" rel="noreferrer" className="mt-4 w-full text-center block px-4 py-3 bg-[#B28D42] text-white font-bold rounded-lg shadow-md">
-              Agendar Medição
+              Receber Consultoria Gratuita
             </a>
           </div>
         </div>

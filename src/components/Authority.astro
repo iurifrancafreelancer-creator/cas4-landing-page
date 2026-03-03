@@ -44,58 +44,74 @@
       </p>
     </div>
       
-      <div class="bg-slate-50 py-8 md:p-10 rounded-2xl shadow-sm border border-slate-100 overflow-hidden w-full">
-        <h3 class="text-xl md:text-2xl font-bold text-[#0A2F5C] mb-6 px-6 md:px-0">
-          Por que clientes exigentes escolhem a Cas4?
-        </h3>
+      <div class="bg-slate-50 py-8 lg:py-12 rounded-2xl shadow-sm border border-slate-100 overflow-hidden w-full flex flex-col lg:flex-row lg:items-center">
         
-        <div class="flex md:flex-col overflow-x-auto snap-x snap-mandatory gap-4 md:gap-8 pb-4 md:pb-0 px-6 md:px-0 hide-scrollbar" style="scrollbar-width: none;">
+        <div class="lg:w-1/3 px-6 lg:px-10 mb-6 lg:mb-0 shrink-0 flex flex-col justify-center">
+          <h3 class="text-xl md:text-3xl font-extrabold text-[#0A2F5C] leading-tight">
+            Por que clientes exigentes escolhem a Cas4?
+          </h3>
+          <p class="hidden lg:block mt-4 text-sm text-slate-500 font-medium tracking-wide">
+            Use as setas para explorar
+          </p>
           
-          <div class="snap-center shrink-0 w-[85%] md:w-auto flex flex-col md:flex-row items-start bg-white md:bg-transparent p-6 md:p-0 rounded-xl border border-slate-100 md:border-none shadow-sm md:shadow-none">
-            <span class="flex-shrink-0 w-12 h-12 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4 md:mb-0 md:mr-4 mt-1">✓</span>
+          <div class="hidden lg:flex gap-3 mt-6">
+            <button id="btn-prev" aria-label="Anterior" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[#0A2F5C] hover:bg-[#0A2F5C] hover:text-white hover:border-[#0A2F5C] transition-all duration-300 shadow-sm group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:-translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button id="btn-next" aria-label="Próximo" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-[#0A2F5C] hover:bg-[#0A2F5C] hover:text-white hover:border-[#0A2F5C] transition-all duration-300 shadow-sm group">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        
+        <div id="slider-container" class="lg:w-2/3 flex overflow-x-auto snap-x snap-mandatory gap-4 md:gap-6 pb-4 md:pb-6 px-6 md:px-0 lg:pr-10 hide-scrollbar items-stretch scroll-smooth" style="scrollbar-width: none;">
+          
+          <div class="snap-center shrink-0 w-[85%] md:w-[320px] flex flex-col items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4">✓</span>
             <div>
-              <span class="font-bold text-slate-800 text-lg md:text-base">Venda consultiva</span>
-              <p class="text-slate-600 text-sm mt-2 md:mt-1 leading-relaxed">
+              <span class="font-bold text-slate-800 text-lg">Venda consultiva</span>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
                 Orientação técnica de especialistas para você investir no material correto para a sua necessidade, garantindo estética e durabilidade.
               </p>
             </div>
           </div>
 
-          <div class="snap-center shrink-0 w-[85%] md:w-auto flex flex-col md:flex-row items-start bg-white md:bg-transparent p-6 md:p-0 rounded-xl border border-slate-100 md:border-none shadow-sm md:shadow-none relative">
-            <span class="flex-shrink-0 w-12 h-12 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4 md:mb-0 md:mr-4 mt-1">✓</span>
+          <div class="snap-center shrink-0 w-[85%] md:w-[320px] flex flex-col items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4">✓</span>
             <div>
-              <span class="font-bold text-slate-800 text-lg md:text-base">Orçamento 360º (sem surpresas)</span>
-              <p class="text-slate-600 text-sm mt-2 md:mt-1 leading-relaxed">
-                Esqueça os custos ocultos. Orçamos o piso, todos os insumos necessários e a mão de obra. Transparência total para você não ter surpresas na ponta do lápis.
-            </div>
-          </div>
-
-          <div class="snap-center shrink-0 w-[85%] md:w-auto flex flex-col md:flex-row items-start bg-white md:bg-transparent p-6 md:p-0 rounded-xl border border-slate-100 md:border-none shadow-sm md:shadow-none">
-            <span class="flex-shrink-0 w-12 h-12 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4 md:mb-0 md:mr-4 mt-1">✓</span>
-            <div>
-              <span class="font-bold text-slate-800 text-lg md:text-base">Mão de obra especializada</span>
-              <p class="text-slate-600 text-sm mt-2 md:mt-1 leading-relaxed">
-                Sabemos como é desgastante buscar e gerenciar prestadores de serviço. Entregamos a solução completa com equipe pontual, educada e extremamente caprichosa.
+              <span class="font-bold text-slate-800 text-lg">Orçamento 360º (sem surpresas)</span>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Esqueça os custos ocultos. Orçamos o piso, todos os insumos necessários e a mão de obra. Transparência total na ponta do lápis.
               </p>
             </div>
           </div>
 
-          <div class="snap-center shrink-0 w-[85%] md:w-auto flex flex-col md:flex-row items-start bg-white md:bg-transparent p-6 md:p-0 rounded-xl border border-slate-100 md:border-none shadow-sm md:shadow-none">
-            <span class="flex-shrink-0 w-12 h-12 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4 md:mb-0 md:mr-4 mt-1">✓</span>
+          <div class="snap-center shrink-0 w-[85%] md:w-[320px] flex flex-col items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4">✓</span>
             <div>
-              <span class="font-bold text-slate-800 text-lg md:text-base">Obra limpa e rápida</span>
-              <p class="text-slate-600 text-sm mt-2 md:mt-1 leading-relaxed">
+              <span class="font-bold text-slate-800 text-lg">Mão de obra especializada</span>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Sabemos como é desgastante buscar prestadores de serviço. Entregamos a solução completa com equipe pontual, educada e caprichosa.
+              </p>
+            </div>
+          </div>
+
+          <div class="snap-center shrink-0 w-[85%] md:w-[320px] flex flex-col items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4">✓</span>
+            <div>
+              <span class="font-bold text-slate-800 text-lg">Obra limpa e rápida</span>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
                 Instalação silenciosa e sem entulho pela casa. Entramos no seu ambiente apenas quando falta o retoque final da pintura.
               </p>
             </div>
           </div>
 
-          <div class="snap-center shrink-0 w-[85%] md:w-auto flex flex-col md:flex-row items-start bg-white md:bg-transparent p-6 md:p-0 rounded-xl border border-slate-100 md:border-none shadow-sm md:shadow-none relative">
-            <span class="flex-shrink-0 w-12 h-12 md:w-8 md:h-8 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4 md:mb-0 md:mr-4 mt-1">✓</span>
+          <div class="snap-center shrink-0 w-[85%] md:w-[320px] flex flex-col items-start bg-white p-6 rounded-xl border border-slate-100 shadow-sm">
+            <span class="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-[#0A2F5C] text-[#B28D42] font-bold mb-4">✓</span>
             <div>
-              <span class="font-bold text-slate-800 text-lg md:text-base">Assistência pós venda</span>
-              <p class="text-slate-600 text-sm mt-2 md:mt-1 leading-relaxed">
-                Aqui você não é um cifrão ambulante, nos preocupamos com a qualidade do trabalho e do seu bem estar ao longo do processo. Estamos com você do começo ao fim.
+              <span class="font-bold text-slate-800 text-lg">Assistência pós venda</span>
+              <p class="text-slate-600 text-sm mt-2 leading-relaxed">
+                Aqui você não é um cifrão ambulante, nos preocupamos com a qualidade do trabalho e do seu bem estar ao longo de todo o processo.
               </p>
             </div>
           </div>
@@ -107,11 +123,12 @@
 </section>
 
 <script>
+  // Lógica dos contadores animados
   const animateCounter = (counter) => {
     const target = +counter.getAttribute('data-target');
     const prefix = counter.getAttribute('data-prefix');
     const suffix = counter.getAttribute('data-suffix');
-    const duration = 2000; // Duração da animação em milissegundos (2 segundos)
+    const duration = 2000; 
     
     let startTimestamp = null;
     
@@ -119,12 +136,10 @@
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       
-      // Efeito de desaceleração (ease-out)
       const easeOutProgress = 1 - Math.pow(1 - progress, 3);
       let currentVal = Math.floor(easeOutProgress * target);
       
       let formattedVal = currentVal;
-      // Adiciona o ponto para milhares (ex: 1500 vira 1.500)
       if (target >= 1000) {
         formattedVal = currentVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
       }
@@ -134,7 +149,6 @@
       if (progress < 1) {
         window.requestAnimationFrame(step);
       } else {
-         // Garante que o valor final seja exato
          let finalVal = target >= 1000 ? target.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") : target;
          counter.innerText = `${prefix}${finalVal}${suffix}`;
       }
@@ -143,19 +157,36 @@
     window.requestAnimationFrame(step);
   };
 
-  // O Intersection Observer garante que a animação só comece quando o usuário rolar a tela até os números
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const counters = entry.target.querySelectorAll('.counter');
         counters.forEach(counter => animateCounter(counter));
-        observer.unobserve(entry.target); // Para a observação após animar
+        observer.unobserve(entry.target); 
       }
     });
-  }, { threshold: 0.3 }); // Inicia quando 30% da seção estiver visível
+  }, { threshold: 0.3 });
 
   const statsContainer = document.getElementById('stats-container');
   if(statsContainer) {
     observer.observe(statsContainer);
+  }
+
+  // LÓGICA DO SLIDER (SETAS NO DESKTOP)
+  const sliderContainer = document.getElementById('slider-container');
+  const btnPrev = document.getElementById('btn-prev');
+  const btnNext = document.getElementById('btn-next');
+
+  if (sliderContainer && btnPrev && btnNext) {
+    // A largura do card é 320px + gap de 24px = 344px de deslocamento
+    const scrollAmount = 344; 
+
+    btnPrev.addEventListener('click', () => {
+      sliderContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    btnNext.addEventListener('click', () => {
+      sliderContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
   }
 </script>
